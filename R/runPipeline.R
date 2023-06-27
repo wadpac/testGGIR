@@ -4,7 +4,6 @@
 #' @param configfile path to GGIR configuration file.
 #' @param datadir path to directory where the accelerometer files to test are stored.
 #' @param verbose verbose
-#' @param timetag Boolean to indicate whether timestamp should be added to filenames
 #' @return Stores the GGIR output based on the configuration file provided and compares
 #' it with the previous output stored in the same workdir.
 #' @export
@@ -12,7 +11,7 @@
 #' @import diffdf
 
 runPipeline = function(workdir = c(), datadir = c(), configfile = c(),
-                       verbose = TRUE, timetag = TRUE) {
+                       verbose = TRUE) {
 
   # Run GGIR
   if (GGIR::isfilelist(datadir) == FALSE) datadir = dir(datadir, full.names = TRUE)

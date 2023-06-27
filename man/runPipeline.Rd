@@ -4,13 +4,7 @@
 \alias{runPipeline}
 \title{runPipeline}
 \usage{
-runPipeline(
-  workdir = c(),
-  datadir = c(),
-  configfile = c(),
-  verbose = TRUE,
-  timetag = TRUE
-)
+runPipeline(workdir = c(), datadir = c(), configfile = c(), verbose = TRUE)
 }
 \arguments{
 \item{workdir}{path to location where code can store test files and results}
@@ -20,8 +14,6 @@ runPipeline(
 \item{configfile}{path to GGIR configuration file.}
 
 \item{verbose}{verbose}
-
-\item{timetag}{Boolean to indicate whether timestamp should be added to filenames}
 }
 \value{
 Stores the GGIR output based on the configuration file provided and compares
